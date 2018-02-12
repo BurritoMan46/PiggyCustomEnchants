@@ -24,7 +24,7 @@ class CustomEnchantCommand extends PluginCommand
     public function __construct($name, Main $plugin)
     {
         parent::__construct($name, $plugin);
-        $this->setDescription("Enchant with custom enchants");
+        $this->setDescription("Enchant items with custom enchants");
         $this->setUsage("/customenchant <about|enchant|help|info|list>");
         $this->setAliases(["ce", "customenchants", "customenchantments", "customenchant"]);
         $this->setPermission("piggycustomenchants.command.ce");
@@ -59,7 +59,7 @@ class CustomEnchantCommand extends PluginCommand
                         $this->aboutForm($sender);
                         return true;
                     }
-                    $sender->sendMessage(TextFormat::GREEN . "PiggyCustomEnchants v" . $this->getPlugin()->getDescription()->getVersion() . " is a custom enchants plugin made by DaPigGuy (IGN: MCPEPIG) & Aericio.\n" . TextFormat::GREEN . "You can find it at https://github.com/DaPigGuy/PiggyCustomEnchants.");
+                    $sender->sendMessage(TextFormat::GREEN . "CustomEnchants v" . $this->getPlugin()->getDescription()->getVersion() . " is a custom enchants plugin made by MangoTheDev And made for §cAversionPE");
                     break;
                 case "enchant":
                     if (!$sender->hasPermission("piggycustomenchants.command.ce.enchant")) {
@@ -89,7 +89,7 @@ class CustomEnchantCommand extends PluginCommand
                         $this->helpForm($sender);
                         return true;
                     }
-                    $sender->sendMessage(TextFormat::GREEN . "---PiggyCE Help---\n" . TextFormat::RESET . "/ce about: Information about this plugin\n/ce enchant: Enchant an item\n/ce help: Show the help page\n/ce info: Get description of enchant\n/ce list: List of enchants");
+                    $sender->sendMessage(TextFormat::BLUE . "---CE Help---\n" . TextFormat::PURPLE . "/ce about: Information about this plugin\n/ce enchant: Enchant an item\n/ce help: Show the help page\n/ce info: Get description of enchant\n/ce list: List of enchants");
                     break;
                 case "info":
                     if (!$sender->hasPermission("piggycustomenchants.command.ce.info")) {
@@ -130,7 +130,7 @@ class CustomEnchantCommand extends PluginCommand
                         $this->formMenu($sender);
                         return true;
                     }
-                    $sender->sendMessage(TextFormat::RED . "Usage: /customenchant <about|enchant|help|info|list>");
+                    $sender->sendMessage(TextFormat::DARK_RED . "Usage: /customenchant <about|enchant|help|info|list>");
                     break;
             }
             return true;
@@ -189,7 +189,7 @@ class CustomEnchantCommand extends PluginCommand
                     }
                     return false;
                 });
-                $form->setTitle(TextFormat::GREEN . "Custom Enchants Menu");
+                $form->setTitle(TextFormat::GREEN . "CustomEnchants Menu");
                 $form->addButton("About");
                 $form->addButton("Enchant");
                 $form->addButton("Help");
@@ -260,7 +260,7 @@ class CustomEnchantCommand extends PluginCommand
                     return false;
                 });
                 $form->setTitle(TextFormat::GREEN . "About");
-                $form->setContent(TextFormat::GREEN . "PiggyCustomEnchants v" . $this->getPlugin()->getDescription()->getVersion() . " is a custom enchants plugin made by DaPigGuy (IGN: MCPEPIG) & Aericio. You can find it at https://github.com/DaPigGuy/PiggyCustomEnchants.");
+                $form->setContent(TextFormat::GREEN . "CustomEnchants v" . $this->getPlugin()->getDescription()->getVersion() . " is a custom enchants plugin made by MangoTheDev and made for §cAversionPE");
                 $form->addButton(TextFormat::BOLD . "Back");
                 $form->sendToPlayer($player);
             }
