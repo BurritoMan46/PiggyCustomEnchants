@@ -294,11 +294,11 @@ class Main extends PluginBase
     public function isSpoon()
     {
         if ($this->getServer()->getName() !== "PocketMine-MP") {
-            $this->getLogger()->error("Pig doesn't like spoons. Due to this, the plugin will not function until you are using PMMP.");
+            $this->getLogger()->error("CustomEnchants doesn't like spoons. Due to this, the plugin will not function until you are using PMMP.");
             return true;
         }
-        if ($this->getDescription()->getAuthors() !== ["DaPigGuy"] || $this->getDescription()->getName() !== "PiggyCustomEnchants") {
-            $this->getLogger()->error("You are not using the original version of this plugin (PiggyCustomEnchants) by DaPigGuy/MCPEPIG.");
+        if ($this->getDescription()->getAuthors() !== ["MangoTheDev"] || $this->getDescription()->getName() !== "CustomEnchant") {
+            $this->getLogger()->error("You are not using the original version of customenchants");
             return true;
         }
         return false;
