@@ -7,11 +7,11 @@ author: DaPigGuy
 permissions:
   piggycustomenchants:
     default: false
-    description: "Use everything in PiggyCustomEnchants"
+    description: "Use everything in CustomEnchants"
     children:
       piggycustomenchants.command:
         default: op
-        description: "Use all PiggyCustomEnchants commands"
+        description: "Use all CustomEnchants commands"
         children:
           piggycustomenchants.command.ce:
             default: op
